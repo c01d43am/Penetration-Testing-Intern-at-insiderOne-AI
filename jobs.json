@@ -1,0 +1,154 @@
+[
+  {
+    "id": "j1",
+    "title": "Data Analyst Intern",
+    "company": "Brightlane Retail",
+    "location": "Remote",
+    "stipend": 12000,
+    "description": "Help the retail team turn sales and customer activity data into clear insights that support better day-to-day decisions.",
+    "responsibilities": [
+      "Clean and organize weekly sales data in spreadsheets.",
+      "Build simple charts and recurring reports for the team.",
+      "Explore trends by product or location and summarize useful findings."
+    ],
+    "requirements": [
+      "Comfort with spreadsheets and basic formulas.",
+      "Curiosity about numbers and attention to detail.",
+      "Basic SQL or data visualization experience is helpful, but not required."
+    ],
+    "learning": "Practical reporting, data quality, and how analysts communicate findings to business teams."
+  },
+  {
+    "id": "j2",
+    "title": "Frontend Developer Intern",
+    "company": "Kite Learning",
+    "location": "Pune",
+    "stipend": 15000,
+    "description": "Work with a small product team to make online learning pages clear, responsive, and easy for students to use.",
+    "responsibilities": [
+      "Build and refine interface components from product designs.",
+      "Check layouts on mobile and desktop screen sizes.",
+      "Fix small usability issues and help review changes before release."
+    ],
+    "requirements": [
+      "Working knowledge of HTML, CSS, and JavaScript.",
+      "Interest in accessible, responsive user interfaces.",
+      "Experience with a component framework or Git is a plus."
+    ],
+    "learning": "Component-based development, frontend testing, accessibility, and collaboration in a product team."
+  },
+  {
+    "id": "j3",
+    "title": "Content Writer Intern",
+    "company": "Tarang Media",
+    "location": "Remote",
+    "stipend": 8000,
+    "description": "Create helpful digital content that explains ideas simply and keeps a consistent voice across the company's channels.",
+    "responsibilities": [
+      "Draft short articles, social posts, and newsletter copy.",
+      "Research topics using reliable public sources.",
+      "Edit drafts for clarity, accuracy, tone, and basic search readability."
+    ],
+    "requirements": [
+      "Strong written communication and careful proofreading.",
+      "Willingness to research unfamiliar subjects.",
+      "A writing sample or portfolio is useful but not essential."
+    ],
+    "learning": "Editorial planning, content research, writing for different formats, and constructive editing."
+  },
+  {
+    "id": "j4",
+    "title": "Finance Intern",
+    "company": "Kosha Fintech",
+    "location": "Mumbai",
+    "stipend": 10000,
+    "description": "Support the finance team with routine analysis and reporting while learning how a fintech business monitors its operations.",
+    "responsibilities": [
+      "Help reconcile and organize expense and invoice records.",
+      "Update spreadsheet trackers and prepare routine summaries.",
+      "Check figures for missing information and flag discrepancies."
+    ],
+    "requirements": [
+      "Currently studying finance, accounting, economics, or a related subject.",
+      "Comfort with spreadsheets and accurate record keeping.",
+      "Discretion when working with business information."
+    ],
+    "learning": "Financial reporting basics, reconciliation workflows, and practical spreadsheet analysis."
+  },
+  {
+    "id": "j5",
+    "title": "UI/UX Design Intern",
+    "company": "Pebble Health",
+    "location": "Bengaluru",
+    "stipend": 15000,
+    "description": "Help design straightforward digital experiences for people using health and wellness products.",
+    "responsibilities": [
+      "Create and refine wireframes and interface mockups.",
+      "Organize feedback from quick usability sessions.",
+      "Work with product and engineering teammates to improve design handoffs."
+    ],
+    "requirements": [
+      "Interest in user-centered design and clear visual communication.",
+      "Comfort creating basic wireframes in a design tool.",
+      "Curiosity about accessibility and inclusive experiences."
+    ],
+    "learning": "User research, prototyping, design systems, and the path from an idea to a shipped interface."
+  },
+  {
+    "id": "j6",
+    "title": "Backend Developer Intern",
+    "company": "Orbit Logistics",
+    "location": "Remote",
+    "stipend": 20000,
+    "description": "Contribute to the services behind logistics tools, helping keep APIs dependable and operational data easy to work with.",
+    "responsibilities": [
+      "Implement and test small API or service improvements.",
+      "Help investigate bugs using logs and reproducible test cases.",
+      "Document endpoints and collaborate on code reviews."
+    ],
+    "requirements": [
+      "Experience with one programming language and basic data structures.",
+      "Understanding of HTTP and JSON APIs.",
+      "Familiarity with a database or Git is helpful."
+    ],
+    "learning": "API design, automated testing, service debugging, and collaborative software development."
+  },
+  {
+    "id": "j7",
+    "title": "Marketing Intern",
+    "company": "Saffron Foods",
+    "location": "Delhi NCR",
+    "stipend": 8000,
+    "description": "Help the marketing team plan useful campaigns and tell the story behind a growing food brand.",
+    "responsibilities": [
+      "Prepare social media calendars and draft campaign copy.",
+      "Coordinate simple content requests with the design team.",
+      "Track engagement metrics and share a short weekly summary."
+    ],
+    "requirements": [
+      "Interest in marketing, communications, or consumer brands.",
+      "Clear writing and reliable organization.",
+      "Basic familiarity with social platforms or spreadsheets is helpful."
+    ],
+    "learning": "Campaign planning, brand communication, content coordination, and reading engagement metrics."
+  },
+  {
+    "id": "j8",
+    "title": "Customer Support Intern",
+    "company": "Vayu Mobility",
+    "location": "Remote",
+    "stipend": 9000,
+    "description": "Help customers get clear answers about mobility services and share recurring feedback with the product team.",
+    "responsibilities": [
+      "Respond to common questions using the team's support guidelines.",
+      "Record issue details clearly and route complex cases to the right team.",
+      "Notice recurring questions and help improve support articles."
+    ],
+    "requirements": [
+      "Patient, clear written communication.",
+      "A thoughtful and respectful approach to customer questions.",
+      "Comfort learning new tools and following documented processes."
+    ],
+    "learning": "Customer communication, support workflows, issue triage, and how user feedback informs product improvements."
+  }
+]

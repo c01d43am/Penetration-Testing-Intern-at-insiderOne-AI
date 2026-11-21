@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f7f3" />
+    <title>Jobs | Find your next opportunity</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #23332d;
+        background: #f4f7f3;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        --green: #466b58;
+        --green-dark: #355342;
+        --muted: #718078;
+        --border: #e1e9e1;
+        --surface: #ffffff;
+      }
+
+      * { box-sizing: border-box; }
+      body { min-width: 320px; margin: 0; background: #f4f7f3; }
+      .page { width: min(100% - 40px, 760px); margin: 0 auto; padding: 64px 0 80px; }
+      .eyebrow { margin: 0 0 12px; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { margin: 0; color: #20352b; font-size: clamp(36px, 7vw, 52px); font-weight: 650; letter-spacing: -.045em; line-height: 1.08; }
+      .intro { margin: 14px 0 30px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+      .search-wrap { position: relative; margin-bottom: 24px; }
+      .search-wrap::before { position: absolute; top: 50%; left: 17px; color: #84948a; content: "⌕"; font-size: 24px; line-height: 1; transform: translateY(-55%); pointer-events: none; }
+      input { width: 100%; min-height: 54px; padding: 0 18px 0 48px; border: 1px solid #dce5dc; border-radius: 14px; outline: none; background: var(--surface); color: #23332d; font: inherit; box-shadow: 0 4px 14px rgb(34 58 45 / 4%); transition: border-color .2s ease, box-shadow .2s ease; }
+      input::placeholder { color: #97a39b; }
+      input:focus { border-color: #86a590; box-shadow: 0 0 0 4px rgb(70 107 88 / 12%); }
+      .job-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+      .job-list li { min-height: 88px; padding: 18px 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: #35443d; font-size: 15px; line-height: 1.55; box-shadow: 0 4px 14px rgb(34 58 45 / 3%); transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+      .job-list li:hover { transform: translateY(-2px); border-color: #cbd9ce; box-shadow: 0 10px 24px rgb(34 58 45 / 7%); }
+      .job-card-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .job-copy { min-width: 0; }
+      .job-title { margin: 0; color: #2b4034; font-size: 17px; font-weight: 650; letter-spacing: -.02em; }
+      .job-company { margin: 4px 0 10px; color: #68776e; font-size: 14px; font-weight: 550; }
+      .job-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+      .job-facts > div { min-width: 112px; padding: 6px 10px; border: 1px solid #edf1ed; border-radius: 9px; background: #f8faf7; }
+      .job-facts dt { color: #829087; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+      .job-facts dd { margin: 2px 0 0; color: #344a3c; font-size: 13px; font-weight: 650; }
+      .job-details { margin-top: 15px; border-top: 1px solid #edf1ed; }
+      .job-details summary { width: fit-content; padding-top: 13px; color: var(--green); font-size: 13px; font-weight: 650; cursor: pointer; }
+      .job-details summary:focus-visible { border-radius: 3px; outline: 3px solid rgb(70 107 88 / 25%); outline-offset: 3px; }
+      .job-details-content { padding-top: 10px; }
+      .job-description { margin: 0 0 16px; color: #53635a; font-size: 14px; }
+      .job-detail-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+      .job-detail-columns h4 { margin: 0 0 7px; color: #344a3c; font-size: 13px; }
+      .job-detail-columns ul { margin: 0; padding-left: 18px; color: #64736a; font-size: 13px; }
+      .job-detail-columns li { min-height: 0; margin: 0 0 5px; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; font-size: inherit; line-height: 1.5; transition: none; }
+      .job-detail-columns li:hover { transform: none; border: 0; box-shadow: none; }
+      .learning-note { margin: 16px 0 0; padding: 11px 13px; border-radius: 10px; background: #f3f7f2; color: #64736a; font-size: 13px; }
+      .learning-note strong { color: #344a3c; }
+      button { flex: 0 0 auto; min-height: 38px; padding: 0 15px; border: 1px solid #d5e1d7; border-radius: 10px; background: #f5f8f4; color: var(--green-dark); font: inherit; font-size: 13px; font-weight: 650; cursor: pointer; transition: background-color .18s ease, border-color .18s ease, transform .18s ease; }
+      button:hover:not(:disabled) { transform: translateY(-1px); border-color: #9db5a3; background: #eaf1ea; }
+      button:focus-visible { outline: 3px solid rgb(70 107 88 / 30%); outline-offset: 2px; }
+      button:disabled { border-color: transparent; background: #edf3ed; color: #6a8572; cursor: default; }
+      .saved-section { margin-top: 48px; padding: 26px; border: 1px solid #e1e9e1; border-radius: 20px; background: #eef3ed; }
+      .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+      h2 { margin: 0; color: #2b4034; font-size: 21px; letter-spacing: -.025em; }
+      .section-note { margin: 0; color: var(--muted); font-size: 13px; }
+      #saved-empty { margin: 0; padding: 18px; border: 1px dashed #cbd9ce; border-radius: 13px; color: #718078; font-size: 14px; text-align: center; }
+      #status { min-height: 20px; margin: -12px 0 12px; color: var(--green-dark); font-size: 13px; }
+
+      @media (max-width: 520px) {
+        .page { width: min(100% - 28px, 760px); padding-top: 42px; }
+        .job-list li { padding: 16px; }
+        .job-card-top { align-items: flex-start; gap: 12px; }
+        button { margin-top: 1px; }
+        .saved-section { margin-top: 36px; padding: 20px 16px; }
+        .section-note { display: none; }
+        .job-detail-columns { grid-template-columns: 1fr; gap: 14px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <p class="eyebrow">A thoughtful next step</p>
+        <h1>Find your next opportunity</h1>
+        <p class="intro">Explore internships that match your interests, and keep the ones you love close.</p>
+      </header>
+      <div class="search-wrap">
+        <input id="search" aria-label="Search jobs" placeholder="Search by title, company or place" />
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+      <ul id="jobs" class="job-list" aria-label="Available jobs"></ul>
+      <section class="saved-section" aria-labelledby="saved-heading">
+        <div class="section-heading">
+          <h2 id="saved-heading">Saved jobs</h2>
+          <p class="section-note">Your shortlist, all in one place</p>
+        </div>
+        <p id="saved-empty">You haven't saved any jobs yet.</p>
+        <ul id="saved-jobs" class="job-list" aria-label="Saved jobs"></ul>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
